@@ -1,0 +1,133 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+
+class CardDemo extends StatefulWidget {
+  const CardDemo({super.key});
+
+  @override
+  State<CardDemo> createState() => _CardDemoState();
+}
+
+class _CardDemoState extends State<CardDemo> {
+  @override
+  Widget build(BuildContext context) {
+   return Scaffold(
+    appBar: AppBar(
+      leading: Icon(Icons.menu),
+      title: Text("NeXuS"),
+      centerTitle: true,
+      actions: [
+        Icon(Icons.alarm),
+      ],
+    ),
+    body: Column(
+      children: [
+        Card(
+          shape: RoundedRectangleBorder(),
+          elevation: 15,
+          shadowColor: Colors.red,
+          child: ListTile(
+            tileColor: Color(0xFF9d9d9d),
+            leading: Icon(Icons.contact_phone),
+            trailing: Icon(Icons.call),
+            iconColor: Colors.black,
+            textColor: Colors.black,
+            title: Text("Contact"),
+            subtitle: Text("Save Info"),
+
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Card(
+          shape: RoundedRectangleBorder(),
+          elevation: 20,
+          shadowColor: Color(0xFFff2e81),
+          child: ListTile(
+            tileColor: Color(0xFFaf7869),
+        leading:Icon(Icons.message) ,
+        trailing: Icon(Icons.email),
+        iconColor: Colors.black,
+        title: Text("Message"),
+        textColor: Colors.black,
+        subtitle: Text("Sent Text"),
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+         Card(
+          shape: RoundedRectangleBorder(),
+          elevation: 20,
+          shadowColor: Color(0xFF445150),
+          child: ListTile(
+            tileColor: Color(0xFF61e2e0),
+        leading:Icon(Icons.music_video) ,
+        trailing: Icon(Icons.start),
+        iconColor: Colors.black,
+        title: Text("Music Fun"),
+        textColor: Colors.black,
+        subtitle: Text("Let's Enjoy"),
+          ),
+
+        ),
+        SizedBox(
+          height:30 ,
+        ),
+         Card(
+          shape: RoundedRectangleBorder(),
+          elevation: 20,
+          shadowColor: Color(0xFFffd720),
+          child: ListTile(
+            tileColor: Color(0xFFfcf6fa),
+        leading:Icon(Icons.bluetooth) ,
+        trailing: Icon(Icons.share),
+        iconColor: Colors.black,
+        title: Text("Bluetooth"),
+        textColor: Colors.black,
+        subtitle: Text(" Share data"),
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+         Card(
+          shape: RoundedRectangleBorder(),
+          elevation: 20,
+          shadowColor: Color(0xFF5b4444),
+          child: ListTile(
+            tileColor: Color(0xFF859db6),
+        leading:Icon(Icons.money) ,
+        trailing: Icon(Icons.atm),
+        iconColor: Colors.black,
+        title: Text("ROCKET"),
+        textColor: Colors.black,
+        subtitle: Text("DBBL"),
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Card(
+          shape: RoundedRectangleBorder(),
+          elevation: 20,
+          shadowColor: Color(0xFF9d9d9d),
+          child: ListTile(
+            tileColor: Color(0xFFff6e9f),
+            iconColor: Colors.black,
+            leading: Icon(Icons.food_bank),
+            trailing: Icon(Icons.payment),
+            textColor: Color(0xFF222222),
+            title: Text("FoodPanda"),
+            subtitle: Text("Pay First"),
+
+          ),
+        ),
+      ],
+      
+    ),
+   );
+  }
+}
